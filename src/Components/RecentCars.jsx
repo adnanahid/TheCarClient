@@ -25,7 +25,7 @@ const RecentCars = () => {
   }, [user?.email]);
 
   return (
-    <div className="max-w-screen-xl mx-auto my-24 px-4 md:px-6 lg:px-8">
+    <div className="max-w-screen-xl mx-auto my-24 px-4 md:px-6 lg:px-8 text-white">
       <h1 className="text-3xl md:text-4xl font-bold mb-12 text-center">
         Recently Added Cars
       </h1>
@@ -33,7 +33,7 @@ const RecentCars = () => {
         {available.map((car) => (
           <article
             key={car.id}
-            className="card bg-base-100 shadow-xl mx-auto transition-transform transform hover:scale-105 w-full md:w-[90%] lg:w-full"
+            className="card bg-[#141414] shadow-xl mx-auto transition-transform transform hover:scale-105 w-full md:w-[90%] lg:w-full"
           >
             <figure>
               <img
@@ -46,15 +46,15 @@ const RecentCars = () => {
               <h2 className="card-title text-lg md:text-xl font-semibold">
                 {car.carModel}
               </h2>
-              <p className="text-gray-700 text-sm">Price: ${car.rentalPrice}</p>
-              <p className="text-gray-700 text-sm">Location: {car.location}</p>
-              <p className="text-gray-700 text-sm">
+              <p className="text-sm">Price: ${car.rentalPrice}</p>
+              <p className="text-sm">Location: {car.location}</p>
+              <p className="text-sm">
                 Listed{" "}
                 {formatDistanceToNow(parseISO(car.dateAdded), {
                   addSuffix: true,
                 })}
               </p>
-              <p className="text-sm text-gray-500">
+              <p className="text-sm">
                 Registration No: {car.registrationNumber}
               </p>
               <p className="font-semibold">Booking Count: {car.RentRequest}</p>

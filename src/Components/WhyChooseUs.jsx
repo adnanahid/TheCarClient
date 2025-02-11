@@ -27,10 +27,10 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 text-white">
       <div className="container mx-auto px-6 lg:px-16">
         {/* Section Title */}
-        <h2 className="text-3xl lg:text-4xl font-bold text-center text-gray-800 mb-12">
+        <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12">
           Why Choose Us?
         </h2>
         {/* Features Grid */}
@@ -38,16 +38,16 @@ const WhyChooseUs = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="flex flex-col items-center text-center bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="flex flex-col bg-[#141414] items-center text-center p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
             >
               {/* Icon */}
               <div className="mb-4">{feature.icon}</div>
               {/* Title */}
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+              <h3 className="text-xl font-semibold mb-2">
                 {feature.title}
               </h3>
               {/* Description */}
-              <p className="text-gray-600">{feature.description}</p>
+              <p className="">{feature.description}</p>
             </div>
           ))}
         </div>

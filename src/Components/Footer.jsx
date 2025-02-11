@@ -9,7 +9,7 @@ import logo from "../assets/logoTesla.png";
 
 const Footer = () => {
   return (
-    <div className="bg-neutral">
+    <div className="bg-[#141414]">
       <footer className="footer text-neutral-content p-10 flex justify-around items-center">
         <aside>
           <img src={logo} alt="" className="w-12" />

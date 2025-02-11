@@ -5,7 +5,7 @@ import AccordionAnimation from "../assets/AccordionAnimation.json";
 
 const FAQSection = () => {
   return (
-    <div className="max-w-screen-lg mx-auto my-24 p-4">
+    <div className="max-w-screen-lg mx-auto my-24 p-4  text-white">
       <h1 className="text-4xl font-bold text-center">
         Everything you need to know about our service
       </h1>
@@ -17,7 +17,7 @@ const FAQSection = () => {
 
         {/* FAQ Section */}
         <div className="w-full md:w-1/2 space-y-4">
-          <div className="collapse collapse-arrow bg-base-200 rounded-lg shadow-md">
+          <div className="collapse collapse-arrow bg-[#141414] rounded-lg shadow-md">
             <input type="radio" name="faq-accordion" defaultChecked />
             <div className="collapse-title text-xl font-medium">
               What do I need to rent a car?
@@ -31,7 +31,7 @@ const FAQSection = () => {
             </div>
           </div>
 
-          <div className="collapse collapse-arrow bg-base-200 rounded-lg shadow-md">
+          <div className="collapse collapse-arrow bg-[#141414] rounded-lg shadow-md">
             <input type="radio" name="faq-accordion" />
             <div className="collapse-title text-xl font-medium">
               How Old Do I Need To Be To Rent A Car?
@@ -44,7 +44,7 @@ const FAQSection = () => {
             </div>
           </div>
 
-          <div className="collapse collapse-arrow bg-base-200 rounded-lg shadow-md">
+          <div className="collapse collapse-arrow bg-[#141414] rounded-lg shadow-md">
             <input type="radio" name="faq-accordion" />
             <div className="collapse-title text-xl font-medium">
               Can I Rent A Car With A Debit Card?

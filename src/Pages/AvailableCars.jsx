@@ -80,7 +80,7 @@ const AvailableCars = () => {
   }
 
   return (
-    <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8 min-h-screen md:pt-24">
+    <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8 min-h-screen md:pt-24 text-white">
       {/* Title */}
       <h1 className="text-3xl font-bold text-center py-6">Available Cars</h1>
 
@@ -92,14 +92,14 @@ const AvailableCars = () => {
           placeholder="Search by model, brand, or location..."
           value={searchQuery}
           onChange={handleSearch}
-          className="col-span-7 input input-bordered w-full px-4 py-2"
+          className="col-span-7 input input-bordered w-full px-4 py-2 bg-[#141414]"
         />
 
         {/* Sort Dropdown */}
         <select
           value={sortOption}
           onChange={handleSort}
-          className="col-span-3 select select-bordered w-full px-4 py-2"
+          className="col-span-3 select select-bordered w-full px-4 py-2 bg-[#141414]"
         >
           <option value="default">Sort by Price</option>
           <option value="price_low_high">Price (Lowest First)</option>
@@ -117,7 +117,7 @@ const AvailableCars = () => {
 
       {/* Car Listings */}
       {filteredCars.length === 0 ? (
-        <div className="text-gray-500 min-h-[50vh] flex items-center justify-center">
+        <div className="min-h-[50vh] flex items-center justify-center">
           No cars match your search.
         </div>
       ) : viewMode === "grid" ? (
@@ -125,7 +125,7 @@ const AvailableCars = () => {
           {filteredCars.map((car, index) => (
             <div
               key={index}
-              className="card bg-base-100 shadow-xl transition-transform transform hover:scale-105 my-12"
+              className="card bg-[#141414] shadow-xl transition-transform transform hover:scale-105 my-12"
             >
               <figure>
                 <img
@@ -138,10 +138,10 @@ const AvailableCars = () => {
                 <h2 className="card-title text-lg md:text-xl font-semibold">
                   {car.carModel}
                 </h2>
-                <p className="text-gray-700 text-sm">
+                <p className="text-sm">
                   Rent: {car.rentalPrice}$/day
                 </p>
-                <p className="text-gray-700 text-sm">
+                <p className="text-sm">
                   Location: {car.location}
                 </p>
                 <p className="text-sm text-gray-500">
@@ -182,10 +182,10 @@ const AvailableCars = () => {
               />
               <div className="flex-1">
                 <h2 className="text-lg font-semibold">{car.carModel}</h2>
-                <p className="text-gray-700 text-sm">
+                <p className="text-sm">
                   Price: ${car.rentalPrice}
                 </p>
-                <p className="text-gray-700 text-sm">
+                <p className="text-sm">
                   Location: {car.location}
                 </p>
                 <p className="text-sm text-gray-500">

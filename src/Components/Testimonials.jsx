@@ -55,9 +55,9 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="max-w-screen-xl mx-auto md:flex items-center gap-5 md:mt-40">
+    <div className="max-w-screen-xl mx-auto md:flex items-center gap-5 md:mt-40 text-white">
       {/* Testimonials Slider */}
-      <div className="md:w-8/12 shadow-lg rounded-xl">
+      <div className="md:w-8/12 shadow-lg rounded-xl bg-[#141414]">
         <h1 className="text-4xl font-bold mt-8 text-center">
           What our customers are
           <br /> saying about us
@@ -72,7 +72,7 @@ const Testimonials = () => {
           {userComments.map((comment, index) => (
             <swiper-slide
               key={index}
-              className="flex flex-col items-center text-center justify-center h-full bg-white px-6 py-8 mb-16"
+              className="flex flex-col items-center text-center justify-center h-full px-6 py-8 mb-16"
             >
               <div
                 className="text-center pt-8"
@@ -89,7 +89,7 @@ const Testimonials = () => {
                   readonly
                 />
               </div>
-              <p className="text-gray-600 text-sm mt-3 w-10/12 mx-auto flex-grow text-center">
+              <p className="text-sm mt-3 w-10/12 mx-auto flex-grow text-center">
                 {comment.comment}
               </p>
               <div className="flex flex-col items-center mt-6 mb-8">
@@ -98,7 +98,7 @@ const Testimonials = () => {
                   alt={`${comment.name}'s avatar`}
                   className="w-16 h-16 rounded-full shadow-md mb-3"
                 />
-                <p className="font-semibold text-gray-800">{comment.name}</p>
+                <p className="font-semibold">{comment.name}</p>
               </div>
             </swiper-slide>
           ))}
@@ -108,13 +108,13 @@ const Testimonials = () => {
       <div className="md:w-4/12 mt-12">
         <form
           onSubmit={handleComment}
-          className="max-w-2xl mx-auto bg-white shadow-lg rounded-lg p-6 mb-8"
+          className="max-w-2xl mx-auto bg-[#141414] shadow-lg rounded-lg p-6 mb-8"
         >
           <h2 className="text-2xl font-bold mb-6">Post Your Comment</h2>
           <div className="mb-4">
             <label
               htmlFor="comment"
-              className="block text-gray-700 font-medium mb-2"
+              className="block font-medium mb-2"
             >
               Your Comment
             </label>
@@ -129,7 +129,7 @@ const Testimonials = () => {
           <div className="mb-4">
             <label
               htmlFor="rating"
-              className="block text-gray-700 font-medium mb-2"
+              className="block font-medium mb-2"
             >
               Rating (1-5)
             </label>
@@ -145,7 +145,7 @@ const Testimonials = () => {
           </div>
           <button
             type="submit"
-            className={`w-full bg-[#E51837] text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition ${
+            className={`w-full bg-[#E51837] py-2 px-4 rounded-lg hover:bg-blue-600 transition ${
               !user && "opacity-50 cursor-not-allowed"
             }`}
             disabled={!user}
