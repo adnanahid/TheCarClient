@@ -55,9 +55,9 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="max-w-screen-xl mx-auto md:flex items-center gap-5 md:mt-40 text-white">
+    <div className="max-w-screen-xl mx-auto md:flex items-center gap-5 md:mt-40 ">
       {/* Testimonials Slider */}
-      <div className="md:w-8/12 shadow-lg rounded-xl bg-[#141414]">
+      <div className="md:w-8/12 shadow-lg rounded-xl">
         <h1 className="text-4xl font-bold mt-8 text-center">
           What our customers are
           <br /> saying about us
@@ -74,9 +74,7 @@ const Testimonials = () => {
               key={index}
               className="flex flex-col items-center text-center justify-center h-full px-6 py-8 mb-16"
             >
-              <div
-                className="text-center pt-8"
-              >
+              <div className="text-center pt-8">
                 <Rating
                   placeholderRating={comment.rating}
                   emptySymbol={
@@ -108,14 +106,11 @@ const Testimonials = () => {
       <div className="md:w-4/12 mt-12">
         <form
           onSubmit={handleComment}
-          className="max-w-2xl mx-auto bg-[#141414] shadow-lg rounded-lg p-6 mb-8"
+          className="max-w-2xl mx-auto shadow-lg rounded-lg p-6 mb-8"
         >
           <h2 className="text-2xl font-bold mb-6">Post Your Comment</h2>
           <div className="mb-4">
-            <label
-              htmlFor="comment"
-              className="block font-medium mb-2"
-            >
+            <label htmlFor="comment" className="block font-medium mb-2">
               Your Comment
             </label>
             <textarea
@@ -127,10 +122,7 @@ const Testimonials = () => {
             ></textarea>
           </div>
           <div className="mb-4">
-            <label
-              htmlFor="rating"
-              className="block font-medium mb-2"
-            >
+            <label htmlFor="rating" className="block font-medium mb-2">
               Rating (1-5)
             </label>
             <input

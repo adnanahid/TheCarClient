@@ -69,23 +69,19 @@ const Registration = () => {
   };
 
   return (
-    <div className="min-h-screen max-w-screen-lg mx-auto flex flex-col md:flex-row items-center justify-center px-4 py-8">
+    <div className="min-h-screen max-w-screen-lg mx-auto flex flex-col md:flex-row items-center justify-center px-4 py-8 ">
       {/* Animation Section */}
       <div className="w-full md:w-1/2 flex justify-center">
         <Lottie animationData={RegistrationAnimation} loop={true} />
       </div>
 
       {/* Registration Form Section */}
-      <div className="w-full md:w-1/2 max-w-md bg-white shadow-lg rounded-lg p-8">
-        <h2 className="text-3xl font-bold text-gray-800 text-center mb-6">
-          Register
-        </h2>
+      <div className="w-full md:w-1/2 max-w-md shadow-lg rounded-lg p-8">
+        <h2 className="text-3xl font-bold text-center mb-6">Register</h2>
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Full Name Input */}
           <div>
-            <label className="block text-sm font-medium text-gray-700">
-              Full Name
-            </label>
+            <label className="block text-sm font-medium">Full Name</label>
             <input
               type="text"
               name="name"
@@ -97,9 +93,7 @@ const Registration = () => {
 
           {/* Email Input */}
           <div>
-            <label className="block text-sm font-medium text-gray-700">
-              Email Address
-            </label>
+            <label className="block text-sm font-medium">Email Address</label>
             <input
               type="email"
               name="email"
@@ -111,9 +105,7 @@ const Registration = () => {
 
           {/* Password Input */}
           <div>
-            <label className="block text-sm font-medium text-gray-700">
-              Password
-            </label>
+            <label className="block text-sm font-medium">Password</label>
             <input
               type="password"
               name="password"
@@ -125,7 +117,7 @@ const Registration = () => {
 
           {/* Photo URL Input */}
           <div>
-            <label className="block text-sm font-medium text-gray-700">
+            <label className="block text-sm font-medium">
               Photo URL (Optional)
             </label>
             <input
@@ -139,26 +131,26 @@ const Registration = () => {
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full bg-red-500 text-white py-2 px-4 rounded-md hover:bg-red-600 focus:outline-none focus:ring focus:ring-red-500"
+            className="w-full bg-red-500 py-2 px-4 rounded-md hover:bg-red-600 focus:outline-none focus:ring focus:ring-red-500"
           >
             Register
           </button>
-          <div className="mt-4 flex items-center justify-between">
-            <span className="block h-px bg-gray-300 w-full"></span>
-            <span className="text-sm text-gray-500 px-4">or</span>
-            <span className="block h-px bg-gray-300 w-full"></span>
+          <div className="mt-2 flex items-center justify-between">
+            <span className="block w-full"></span>
+            <span className="text-sm px-4">or</span>
+            <span className="block w-full"></span>
           </div>
         </form>
         <button
           onClick={handleGoogleLogin}
-          className="mt-4 w-full flex items-center justify-center gap-2 bg-blue-500 text-white py-2 rounded-lg shadow-md hover:bg-red-600 transition-all"
+          className="mt-4 w-full flex items-center justify-center gap-2 bg-blue-500 py-2 rounded-lg shadow-md hover:bg-red-600 transition-all"
         >
           <FaGoogle />
           Login with Google
         </button>
 
         {/* Redirect to Login Page */}
-        <p className="mt-4 text-center text-gray-600">
+        <p className="mt-4 text-center">
           Already have an account?{" "}
           <Link to="/login" className="text-blue-500 hover:underline">
             Login here

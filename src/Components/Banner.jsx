@@ -11,8 +11,8 @@ const Banner = () => {
       }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-        <div className="text-center text-white px-6 md:px-12">
+      <div className="absolute inset-0 bg bg-opacity-50 flex items-center justify-center text-white">
+        <div className="text-center  px-6 md:px-12">
           {/* Heading */}
           <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold drop-shadow-md leading-tight">
             Drive Your Dreams Today!
@@ -23,7 +23,7 @@ const Banner = () => {
           </p>
           {/* Call to Action Button */}
           <Link to="/available-cars">
-            <button className="mt-6 px-4 py-2 sm:px-6 sm:py-3 bg-[#E51837] hover:bg-red-700 text-white text-sm sm:text-base md:text-lg font-semibold rounded-lg shadow-lg transition duration-300">
+            <button className="mt-6 px-4 py-2 sm:px-6 sm:py-3 bg-[#E51837] hover:bg-red-700  text-sm sm:text-base md:text-lg font-semibold rounded-lg shadow-lg transition duration-300">
               View Available Cars
             </button>
           </Link>

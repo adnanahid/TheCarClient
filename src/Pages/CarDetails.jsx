@@ -81,7 +81,7 @@ const CarDetails = () => {
   };
 
   return (
-    <div className="max-w-5xl mx-auto py-10 md:pt-24 px-4">
+    <div className="max-w-5xl mx-auto py-10 md:pt-24 px-4 ">
       {!car ? (
         <p className="text-center text-gray-500">Loading car details...</p>
       ) : (
@@ -94,26 +94,26 @@ const CarDetails = () => {
             />
           </div>
           <h1 className="text-3xl font-bold mb-4">{car.carModel}</h1>
-          <p className="text-lg text-gray-600 mb-2">
+          <p className="text-lg mb-2">
             <strong>Price Per Day:</strong> ${car.rentalPrice}
           </p>
-          <p className="text-lg text-gray-600 mb-2">
+          <p className="text-lg mb-2">
             <strong>Availability:</strong> {car.availability}
           </p>
-          <p className="text-lg text-gray-600 mb-4">
+          <p className="text-lg mb-4">
             <strong>Location:</strong> {car.location}
           </p>
           <div className="mb-6">
             <h2 className="text-xl font-semibold mb-2">Features</h2>
-            <p className="text-gray-700">{car.features}</p>
+            <p className="">{car.features}</p>
           </div>
           <div className="mb-6">
             <h2 className="text-xl font-semibold mb-2">Description</h2>
-            <p className="text-gray-700">{car.description}</p>
+            <p className="">{car.description}</p>
           </div>
           <button
             onClick={openModal}
-            className="btn w-full text-white text-xl bg-[#E51837]"
+            className="btn w-full  text-lg bg-[#E51837] border-none"
           >
             Book Now
           </button>
@@ -122,7 +122,7 @@ const CarDetails = () => {
             <div className="modal modal-open">
               <form
                 onSubmit={handleBooking}
-                className="modal-box text-center"
+                className="modal-box text-center "
                 role="dialog"
                 aria-labelledby="modal-title"
                 aria-describedby="modal-description"
@@ -148,7 +148,7 @@ const CarDetails = () => {
                     value={startDate}
                     onChange={(e) => setStartDate(e.target.value)}
                     min={today}
-                    className="input input-bordered w-full"
+                    className="input input-bordered w-full "
                   />
                 </div>
                 <div className="py-2">
@@ -162,7 +162,7 @@ const CarDetails = () => {
                     value={endDate}
                     onChange={(e) => setEndDate(e.target.value)}
                     min={startDate || today}
-                    className="input input-bordered w-full"
+                    className="input input-bordered w-full "
                   />
                 </div>
                 <div className="py-4">
@@ -171,10 +171,17 @@ const CarDetails = () => {
                   </p>
                 </div>
                 <div className="modal-action">
-                  <button type="button" className="btn" onClick={closeModal}>
+                  <button
+                    type="button"
+                    className="btn btn-sm  border-none hover:bg-red-950 bg-[#E51837]"
+                    onClick={closeModal}
+                  >
                     Cancel
                   </button>
-                  <button type="submit" className="btn bg-[#E51837] text-white">
+                  <button
+                    type="submit"
+                    className="btn btn-sm bg-blue-600 hover:bg-blue-950 border-none "
+                  >
                     Confirm Booking
                   </button>
                 </div>

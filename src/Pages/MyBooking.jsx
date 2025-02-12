@@ -100,12 +100,12 @@ const MyBooking = () => {
   };
 
   return (
-    <div className="max-w-screen-lg mx-auto min-h-screen pt-16 md:pt-24 px-4 sm:px-6 lg:px-8">
+    <div className="max-w-screen-lg mx-auto min-h-screen pt-16 md:pt-24 px-4 sm:px-6 lg:px-8 ">
       <div className="overflow-x-auto">
         <h1 className="text-4xl font-bold text-center mb-12">My Booking</h1>
         {myBooking.length > 0 ? (
           <table className="table table-auto w-full">
-            <thead>
+            <thead className="">
               <tr>
                 <th className="text-center text-lg font-bold">Image</th>
                 <th className="text-center text-lg font-bold">Model</th>
@@ -120,7 +120,7 @@ const MyBooking = () => {
             </thead>
             <tbody>
               {myBooking.map((myCar, index) => (
-                <tr key={index} className="hover:bg-gray-100 transition">
+                <tr key={index}>
                   <td className="text-center">
                     <div className="avatar">
                       <div className="mask mask-squircle h-12 w-12">
@@ -144,7 +144,7 @@ const MyBooking = () => {
                         setStartDate(new Date(myCar.startDate));
                         setEndDate(new Date(myCar.endDate));
                       }}
-                      className="btn btn-xs bg-blue-400 flex text-white gap-2 items-center text-center hover:bg-blue-600 md:w-32"
+                      className="btn btn-xs bg-blue-600 flex  gap-2 items-center text-center hover:bg-blue-900 md:w-32"
                       disabled={myCar.status === "cancel"}
                     >
                       <SlCalender /> <span>Modify Date</span>
@@ -210,7 +210,7 @@ const MyBooking = () => {
                       className={`btn btn-xs ${
                         myCar.status === "cancel"
                           ? "bg-gray-400 text-gray-700 cursor-not-allowed"
-                          : "bg-red-500 hover:bg-red-700 text-white"
+                          : "bg-red-600 hover:bg-red-900 "
                       }`}
                     >
                       <FaTrashCan /> <span>Cancel Booking</span>
@@ -228,7 +228,7 @@ const MyBooking = () => {
       </div>
 
       {myBooking.length > 0 && (
-        <div className="p-4 bg-white rounded-lg shadow-md my-12">
+        <div className="p-4  rounded-lg shadow-md my-12">
           <h2 className="text-2xl font-semibold text-gray-700 mb-4">
             Chart based on car Daily Rental Price
           </h2>

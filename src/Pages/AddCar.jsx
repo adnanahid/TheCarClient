@@ -24,7 +24,8 @@ const AddCar = () => {
           availability: "Available",
           PostedBy: user?.displayName,
           email: user?.email,
-        }, {withCredentials:true}
+        },
+        { withCredentials: true }
       );
       // Reset the form
       e.target.reset();
@@ -36,7 +37,7 @@ const AddCar = () => {
   };
 
   return (
-    <div className="min-h-scree pb-10 px-6 md:pt-24">
+    <div className="min-h-scree pb-10 px-6 md:pt-24 ">
       <div className="max-w-3xl mx-auto p-8 rounded-lg shadow-md">
         <h2 className="text-3xl font-bold mb-6 text-center">Add New Car</h2>
         <form onSubmit={handleSubmit} className="space-y-6">
@@ -106,7 +107,7 @@ const AddCar = () => {
             <label className="label font-semibold">Description</label>
             <textarea
               name="description"
-              className="textarea textarea-bordered w-full"
+              className="textarea textarea-bordered w-full "
               placeholder="Add a detailed description"
             ></textarea>
           </div>
@@ -117,14 +118,17 @@ const AddCar = () => {
             <input
               type="text"
               name="location"
-              className="input input-bordered w-full"
+              className="input input-bordered w-full "
               placeholder="Enter location"
               required
             />
           </div>
 
           {/* Submit Button */}
-          <button type="submit" className="btn bg-[#E51837] w-full text-white">
+          <button
+            type="submit"
+            className="btn bg-[#E51837] w-full  border-none"
+          >
             Add Car
           </button>
         </form>

@@ -25,7 +25,7 @@ const RecentCars = () => {
   }, [user?.email]);
 
   return (
-    <div className="max-w-screen-xl mx-auto my-24 px-4 md:px-6 lg:px-8 text-white">
+    <div className="max-w-screen-xl mx-auto mt-36 px-4 md:px-6 lg:px-8 ">
       <h1 className="text-3xl md:text-4xl font-bold mb-12 text-center">
         Recently Added Cars
       </h1>
@@ -33,7 +33,7 @@ const RecentCars = () => {
         {available.map((car) => (
           <article
             key={car.id}
-            className="card bg-[#141414] shadow-xl mx-auto transition-transform transform hover:scale-105 w-full md:w-[90%] lg:w-full"
+            className="card shadow-xl mx-auto transition-transform transform hover:scale-105 w-full md:w-[90%] lg:w-full"
           >
             <figure>
               <img
@@ -58,7 +58,7 @@ const RecentCars = () => {
                 Registration No: {car.registrationNumber}
               </p>
               <p className="font-semibold">Booking Count: {car.RentRequest}</p>
-              <p className="text-sm text-green-600 font-semibold">
+              <p className="text-sm text-blue-600 font-semibold">
                 Status: {car.availability}
               </p>
             </div>

@@ -4,7 +4,6 @@ import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
-
 const SpecialOffers = () => {
   const offers = [
     {
@@ -40,10 +39,8 @@ const SpecialOffers = () => {
   ];
 
   return (
-    <section className="py-10 max-w-screen-xl mx-auto px-4 mt-20 text-white">
-      <h2 className="text-3xl font-bold text-center mb-12">
-        Special Offers
-      </h2>
+    <section className="max-w-screen-xl mx-auto px-4 mt-36 ">
+      <h2 className="text-3xl font-bold text-center mb-12">Special Offers</h2>
       <Swiper
         modules={[Pagination]}
         spaceBetween={30}
@@ -58,13 +55,9 @@ const SpecialOffers = () => {
       >
         {offers.map((offer, index) => (
           <SwiperSlide key={index}>
-            <div className="card flex flex-col rounded-lg p-6 text-center h-72 shadow-xl bg-[#141414] mb-10">
-              <h3 className="text-xl font-semibold pt-8">
-                {offer.title}
-              </h3>
-              <p className="mt-4 flex-grow">
-                {offer.description}
-              </p>
+            <div className="card flex flex-col rounded-lg p-6 text-center h-72 shadow-xl mb-10">
+              <h3 className="text-xl font-semibold pt-8">{offer.title}</h3>
+              <p className="mt-4 flex-grow">{offer.description}</p>
               <button className="mt-6 bg-[#E51837] py-2 px-4 rounded-lg hover:bg-[#C41630] transition-colors">
                 {offer.buttonText}
               </button>

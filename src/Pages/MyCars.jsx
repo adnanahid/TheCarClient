@@ -35,7 +35,7 @@ const MyCars = () => {
         <p>Are you sure you want to delete this car?</p>
         <div className="flex justify-end gap-2 mt-2">
           <button
-            className="btn bg-red-500 btn-sm text-white"
+            className="btn bg-red-500 btn-sm "
             onClick={async () => {
               try {
                 await axios.delete(
@@ -54,7 +54,7 @@ const MyCars = () => {
             Yes
           </button>
           <button
-            className="btn bg-green-400 btn-sm text-white"
+            className="btn bg-green-400 btn-sm "
             onClick={() => toast.dismiss(t.id)}
           >
             No
@@ -100,16 +100,16 @@ const MyCars = () => {
 
   if (myCars.length === 0)
     return (
-      <div className="text-gray-500 min-h-screen flex flex-col items-center justify-center">
+      <div className=" min-h-screen flex flex-col items-center justify-center">
         <p>No cars available. Add a new car to get started!</p>
-        <Link to="/add-car" className="btn btn-primary pt-4">
+        <Link to="/add-car" className="btn bg-red-600 w-32 border-none  mt-3">
           Add Car
         </Link>
       </div>
     );
 
   return (
-    <div className="min-h-screen pt-24">
+    <div className="min-h-screen pt-24 ">
       <h1 className="text-4xl font-bold text-center">My Cars</h1>
       <div className="text-end lg:max-w-screen-lg mx-auto py-4 mb-4">
         <div>
@@ -130,10 +130,10 @@ const MyCars = () => {
         </div>
       </div>
 
-      <div className="overflow-x-auto lg:max-w-screen-lg mx-auto">
+      <div className="overflow-x-auto lg:max-w-screen-lg mx-auto  rounded-lg">
         <table className="table table-auto w-full">
           {/* head */}
-          <thead>
+          <thead className=" text-base">
             <tr>
               <th className="text-center">Image</th>
               <th className="text-center">Model</th>
@@ -209,49 +209,65 @@ const MyCars = () => {
                 />
               </div>
 
-              {/* Rental Price */}
-              <div className="form-control">
-                <label className="label font-semibold">
-                  Daily Rental Price
-                </label>
-                <input
-                  type="number"
-                  name="rentalPrice"
-                  defaultValue={selectedCar.rentalPrice}
-                  className="input input-bordered w-full"
-                  placeholder="Enter price per day"
-                  required
-                />
+              <div className="grid grid-cols-2 gap-5">
+                {/* Rental Price */}
+                <div className="form-control col-span-1">
+                  <label className="label font-semibold">
+                    Daily Rental Price
+                  </label>
+                  <input
+                    type="number"
+                    name="rentalPrice"
+                    defaultValue={selectedCar.rentalPrice}
+                    className="input input-bordered w-full"
+                    placeholder="Enter price per day"
+                    required
+                  />
+                </div>
+                {/* Location */}
+                <div className="form-control col-span-1">
+                  <label className="label font-semibold">Location</label>
+                  <input
+                    type="text"
+                    name="location"
+                    defaultValue={selectedCar.location}
+                    className="input input-bordered w-full"
+                    placeholder="Enter location"
+                    required
+                  />
+                </div>
               </div>
 
-              {/* Availability */}
-              <div className="form-control">
-                <label className="label font-semibold">Availability</label>
-                <select
-                  name="availability"
-                  defaultValue={selectedCar.availability}
-                  className="select select-bordered w-full"
-                  required
-                >
-                  <option value="">Select availability</option>
-                  <option value="Available">Available</option>
-                  <option value="Unavailable">Unavailable</option>
-                </select>
-              </div>
+              <div className="grid grid-cols-2 gap-5">
+                {/* Availability */}
+                <div className="form-control col-span-1">
+                  <label className="label font-semibold">Availability</label>
+                  <select
+                    name="availability"
+                    defaultValue={selectedCar.availability}
+                    className="select select-bordered w-full"
+                    required
+                  >
+                    <option value="">Select availability</option>
+                    <option value="Available">Available</option>
+                    <option value="Unavailable">Unavailable</option>
+                  </select>
+                </div>
 
-              {/* Vehicle Registration Number */}
-              <div className="form-control">
-                <label className="label font-semibold">
-                  Vehicle Registration Number
-                </label>
-                <input
-                  type="text"
-                  name="registrationNumber"
-                  defaultValue={selectedCar.registrationNumber}
-                  className="input input-bordered w-full"
-                  placeholder="Enter registration number"
-                  required
-                />
+                {/* Vehicle Registration Number */}
+                <div className="form-control col-span-1">
+                  <label className="label font-semibold">
+                    Vehicle Registration Number
+                  </label>
+                  <input
+                    type="text"
+                    name="registrationNumber"
+                    defaultValue={selectedCar.registrationNumber}
+                    className="input input-bordered w-full"
+                    placeholder="Enter registration number"
+                    required
+                  />
+                </div>
               </div>
 
               {/* Features */}
@@ -277,32 +293,18 @@ const MyCars = () => {
                 ></textarea>
               </div>
 
-              {/* Location */}
-              <div className="form-control">
-                <label className="label font-semibold">Location</label>
-                <input
-                  type="text"
-                  name="location"
-                  defaultValue={selectedCar.location}
-                  className="input input-bordered w-full"
-                  placeholder="Enter location"
-                  required
-                />
+              <div className="flex pt-6 gap-5 justify-end">
+                {/* Submit Button */}
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className="btn bg-red-600  border-none"
+                >
+                  Close Modal
+                </button>
+                <button type="submit" className="btn bg-blue-600  border-none">
+                  Update Information
+                </button>
               </div>
-
-              {/* Submit Button */}
-              <button
-                type="submit"
-                className="btn bg-blue-600 w-full text-white"
-              >
-                Update Information
-              </button>
-              <button
-                onClick={() => setIsOpen(false)}
-                className="w-full btn bg-red-600 text-white"
-              >
-                Close Modal
-              </button>
             </form>
           </div>
         </dialog>

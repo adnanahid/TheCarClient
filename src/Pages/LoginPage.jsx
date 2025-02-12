@@ -46,63 +46,57 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center max-w-[900px] mx-auto">
-      <div className="flex flex-col md:flex-row items-center gap-8 bg-white rounded-xl  p-6">
+    <div className="min-h-screen flex items-center justify-center max-w-[900px] mx-auto ">
+      <div className="flex flex-col md:flex-row items-center gap-8 rounded-xl p-6">
         {/* Animation Section */}
         <div className="w-full md:w-1/2">
           <Lottie animationData={LoginAnimation} loop={true} />
         </div>
 
         {/* Form Section */}
-        <div className="w-full md:w-1/2 max-w-md shadow-lg p-8 rounded-xl">
-          <h2 className="text-3xl font-bold text-center mb-6 text-gray-800">
-            Welcome Back
-          </h2>
+        <div className="w-full md:w-1/2 max-w-md p-8  rounded-lg">
+          <h2 className="text-3xl font-bold text-center mb-6">Welcome Back</h2>
           <form onSubmit={handleSignIn}>
             <div className="mb-4">
-              <label className="block text-sm font-medium text-gray-700">
-                Email
-              </label>
+              <label className="block text-sm font-medium">Email</label>
               <input
                 type="email"
                 name="email"
                 placeholder="Enter your email"
-                className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                className="mt-1 block w-full px-4 py-2 border rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
                 required
               />
             </div>
             <div className="mb-6">
-              <label className="block text-sm font-medium text-gray-700">
-                Password
-              </label>
+              <label className="block text-sm font-medium">Password</label>
               <input
                 type="password"
                 name="password"
                 placeholder="Enter your password"
-                className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                className="mt-1 block w-full px-4 py-2 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
                 required
               />
             </div>
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white py-2 rounded-lg shadow-md hover:bg-blue-700 transition-all"
+              className="w-full bg-blue-600  py-2 rounded-lg shadow-md hover:bg-blue-700 transition-all"
             >
               Login
             </button>
           </form>
           <div className="mt-4 flex items-center justify-between">
-            <span className="block h-px bg-gray-300 w-full"></span>
-            <span className="text-sm text-gray-500 px-4">or</span>
-            <span className="block h-px bg-gray-300 w-full"></span>
+            <span className="block w-full"></span>
+            <span className="text-sm px-4">or</span>
+            <span className="block w-full"></span>
           </div>
           <button
             onClick={handleGoogleLogin}
-            className="mt-4 w-full flex items-center justify-center gap-2 bg-red-500 text-white py-2 rounded-lg shadow-md hover:bg-red-600 transition-all"
+            className="mt-4 w-full flex items-center justify-center gap-2 bg-red-500  py-2 rounded-lg shadow-md hover:bg-red-600 transition-all"
           >
             <FaGoogle />
             Login with Google
           </button>
-          <p className="text-center mt-6 text-sm text-gray-600">
+          <p className="text-center mt-6 text-sm">
             Don't have an account?{" "}
             <Link
               to="/registration"

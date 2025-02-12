@@ -6,7 +6,7 @@ import ErrorAnimation from "../assets/ErrorAnimation.json";
 const ErrorPage = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
-      <button className="btn mt-4 px-6 py-2 bg-[#E51837] text-white rounded-lg">
+      <button className="btn mt-4 px-6 py-2 bg-[#E51837]  rounded-lg">
         <Link className="" to="/">
           Back to Home
         </Link>
