@@ -109,7 +109,7 @@ const AvailableCars = () => {
         {/* View Toggle */}
         <button
           onClick={() => setViewMode(viewMode === "grid" ? "list" : "grid")}
-          className="col-span-2 btn bg-blue-600  px-4 py-2 border-none"
+          className="col-span-2 btn text-white bg-blue-600  px-4 py-2 border-none"
         >
           {viewMode === "grid" ? "List View" : "Grid View"}
         </button>
@@ -150,7 +150,7 @@ const AvailableCars = () => {
                   {user ? (
                     <Link
                       to={`/cars/${car._id}`}
-                      className="btn bg-[#E51837]  w-full hover:bg-blue-600 border-none"
+                      className="btn bg-[#E51837] text-white w-full hover:bg-blue-600 border-none"
                     >
                       Details
                     </Link>

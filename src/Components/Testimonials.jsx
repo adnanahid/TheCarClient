@@ -137,7 +137,7 @@ const Testimonials = () => {
           </div>
           <button
             type="submit"
-            className={`w-full bg-[#E51837] py-2 px-4 rounded-lg hover:bg-blue-600 transition ${
+            className={`w-full text-white bg-[#E51837] py-2 px-4 rounded-lg hover:bg-blue-600 transition ${
               !user && "opacity-50 cursor-not-allowed"
             }`}
             disabled={!user}

@@ -1,7 +1,10 @@
-import React from "react";
-import { FaCar, FaDollarSign, FaRegSmile, FaHeadset } from "react-icons/fa"; // Icons from react-icons
+import React, { useContext } from "react";
+import { FaCar, FaDollarSign, FaRegSmile, FaHeadset } from "react-icons/fa";
+import { AuthContext } from "../Provider/AuthProvider";
 
 const WhyChooseUs = () => {
+  const { theme } = useContext(AuthContext);
+
   const features = [
     {
       icon: <FaCar className="text-red-600 text-4xl" />,
@@ -38,7 +41,9 @@ const WhyChooseUs = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="flex flex-col items-center text-center p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className={`flex flex-col items-center text-center p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 ${
+                theme === "dark" ? "bg-[#141414]" : ""
+              }`}
             >
               {/* Icon */}
               <div className="mb-4">{feature.icon}</div>

@@ -79,7 +79,7 @@ const LoginPage = () => {
             </div>
             <button
               type="submit"
-              className="w-full bg-blue-600  py-2 rounded-lg shadow-md hover:bg-blue-700 transition-all"
+              className="w-full text-white bg-blue-600  py-2 rounded-lg shadow-md hover:bg-blue-700 transition-all"
             >
               Login
             </button>
@@ -91,7 +91,7 @@ const LoginPage = () => {
           </div>
           <button
             onClick={handleGoogleLogin}
-            className="mt-4 w-full flex items-center justify-center gap-2 bg-red-500  py-2 rounded-lg shadow-md hover:bg-red-600 transition-all"
+            className="mt-4 text-white w-full flex items-center justify-center gap-2 bg-red-500  py-2 rounded-lg shadow-md hover:bg-red-600 transition-all"
           >
             <FaGoogle />
             Login with Google

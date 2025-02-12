@@ -5,7 +5,7 @@ import axios from "axios";
 import { formatDistanceToNow, parseISO } from "date-fns";
 
 const RecentCars = () => {
-  const { user } = useContext(AuthContext);
+  const { user, theme } = useContext(AuthContext);
   const [available, setAvailable] = useState([]);
 
   useEffect(() => {
@@ -31,9 +31,11 @@ const RecentCars = () => {
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {available.map((car) => (
-          <article
+          <div
             key={car.id}
-            className="card shadow-xl mx-auto transition-transform transform hover:scale-105 w-full md:w-[90%] lg:w-full"
+            className={`card shadow-xl mx-auto transition-transform transform hover:scale-105 w-full md:w-[90%] lg:w-full ${
+              theme === "dark" ? "bg-[#141414]" : ""
+            }`}
           >
             <figure>
               <img
@@ -62,7 +64,7 @@ const RecentCars = () => {
                 Status: {car.availability}
               </p>
             </div>
-          </article>
+          </div>
         ))}
       </div>
     </div>

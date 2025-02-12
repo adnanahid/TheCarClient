@@ -58,7 +58,7 @@ const SpecialOffers = () => {
             <div className="card flex flex-col rounded-lg p-6 text-center h-72 shadow-xl mb-10">
               <h3 className="text-xl font-semibold pt-8">{offer.title}</h3>
               <p className="mt-4 flex-grow">{offer.description}</p>
-              <button className="mt-6 bg-[#E51837] py-2 px-4 rounded-lg hover:bg-[#C41630] transition-colors">
+              <button className="mt-6 text-white bg-[#E51837] py-2 px-4 rounded-lg hover:bg-[#C41630] transition-colors">
                 {offer.buttonText}
               </button>
             </div>

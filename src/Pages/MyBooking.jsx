@@ -147,7 +147,7 @@ const MyBooking = () => {
                       className="btn btn-xs bg-blue-600 flex  gap-2 items-center text-center hover:bg-blue-900 md:w-32"
                       disabled={myCar.status === "cancel"}
                     >
-                      <SlCalender /> <span>Modify Date</span>
+                      <SlCalender /> <span className="text-white">Modify Date</span>
                     </button>
 
                     {/* Modal for editing booking */}
@@ -195,7 +195,7 @@ const MyBooking = () => {
                             >
                               Cancel
                             </button>
-                            <button type="submit" className="btn btn-primary">
+                            <button type="submit" className="btn text-white bg-blue-600">
                               Save Changes
                             </button>
                           </div>
@@ -213,7 +213,7 @@ const MyBooking = () => {
                           : "bg-red-600 hover:bg-red-900 "
                       }`}
                     >
-                      <FaTrashCan /> <span>Cancel Booking</span>
+                      <FaTrashCan /> <span className="text-white">Cancel Booking</span>
                     </button>
                   </td>
                 </tr>

@@ -8,11 +8,8 @@ import { HiMiniSun } from "react-icons/hi2";
 import { GoMoon } from "react-icons/go";
 
 const Navbar = () => {
-  const { user, signOutUser } = useContext(AuthContext);
+  const { user, signOutUser, theme, setTheme } = useContext(AuthContext);
   const navigate = useNavigate();
-
-  // State to track theme
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
 
   // Apply theme when component mounts
   useEffect(() => {

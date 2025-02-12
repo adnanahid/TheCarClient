@@ -102,7 +102,7 @@ const MyCars = () => {
     return (
       <div className=" min-h-screen flex flex-col items-center justify-center">
         <p>No cars available. Add a new car to get started!</p>
-        <Link to="/add-car" className="btn bg-red-600 w-32 border-none  mt-3">
+        <Link to="/add-car" className="btn bg-red-600 w-32 border-none text-white mt-3">
           Add Car
         </Link>
       </div>
@@ -297,11 +297,11 @@ const MyCars = () => {
                 {/* Submit Button */}
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="btn bg-red-600  border-none"
+                  className="btn bg-red-600 text-white border-none"
                 >
                   Close Modal
                 </button>
-                <button type="submit" className="btn bg-blue-600  border-none">
+                <button type="submit" className="btn bg-blue-600 text-white border-none">
                   Update Information
                 </button>
               </div>

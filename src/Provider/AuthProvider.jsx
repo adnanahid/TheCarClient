@@ -57,7 +57,7 @@ const AuthProvider = ({ children }) => {
             { email: currentUser.email },
             { withCredentials: true }
           );
-          console.log("JWT generated:", response.data);
+
         } else {
           // Clear JWT and log the user out
           const response = await axios.post(
@@ -78,6 +78,20 @@ const AuthProvider = ({ children }) => {
     return () => unSubscribe(); // Clean up subscription on component unmount
   }, []);
 
+
+  //theme
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+
+  useEffect(() => {
+    // Apply theme to <html> for a global effect
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
   const authInfo = {
     user,
     setUser,
@@ -88,6 +102,8 @@ const AuthProvider = ({ children }) => {
     updateUserProfile,
     loading,
     setLoading,
+    theme,
+    setTheme
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>

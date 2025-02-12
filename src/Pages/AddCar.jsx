@@ -127,7 +127,7 @@ const AddCar = () => {
           {/* Submit Button */}
           <button
             type="submit"
-            className="btn bg-[#E51837] w-full  border-none"
+            className="btn bg-[#E51837] w-full text-white border-none"
           >
             Add Car
           </button>
