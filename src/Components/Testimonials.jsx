@@ -10,7 +10,7 @@ import { FaRegStar, FaStar } from "react-icons/fa";
 
 const Testimonials = () => {
   const AutoplaySlider = withAutoplay(AwesomeSlider);
-  const { user } = useContext(AuthContext);
+  const { user, theme } = useContext(AuthContext);
   const [userComments, setUserComments] = useState([]);
 
   const fetchComments = async () => {
@@ -57,7 +57,11 @@ const Testimonials = () => {
   return (
     <div className="max-w-screen-xl mx-auto md:flex items-center gap-5 md:mt-40 ">
       {/* Testimonials Slider */}
-      <div className="md:w-8/12 shadow-lg rounded-xl">
+      <div
+        className={`md:w-8/12 shadow-lg rounded-xl  ${
+          theme === "dark" ? "bg-[#141414]" : "bg-base-200"
+        }`}
+      >
         <h1 className="text-4xl font-bold mt-8 text-center">
           What our customers are
           <br /> saying about us
@@ -72,9 +76,9 @@ const Testimonials = () => {
           {userComments.map((comment, index) => (
             <swiper-slide
               key={index}
-              className="flex flex-col items-center text-center justify-center h-full px-6 py-8 mb-16"
+              className={`flex flex-col items-center text-center justify-center h-full px-6 py-8 mb-16`}
             >
-              <div className="text-center pt-8">
+              <div className={`text-center pt-8 `}>
                 <Rating
                   placeholderRating={comment.rating}
                   emptySymbol={
@@ -106,7 +110,11 @@ const Testimonials = () => {
       <div className="md:w-4/12 mt-12">
         <form
           onSubmit={handleComment}
-          className="max-w-2xl mx-auto shadow-lg rounded-lg p-6 mb-8"
+          className={`max-w-2xl mx-auto shadow-lg rounded-lg p-6 mb-8   ${
+            theme === "dark"
+              ? "bg-[#141414] text-white"
+              : "bg-base-200 text-black"
+          }`}
         >
           <h2 className="text-2xl font-bold mb-6">Post Your Comment</h2>
           <div className="mb-4">

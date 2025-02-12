@@ -4,7 +4,7 @@ import axios from "axios";
 import toast from "react-hot-toast";
 
 const AddCar = () => {
-  const { user } = useContext(AuthContext); // Assumes user context has `user` info
+  const { user, theme } = useContext(AuthContext); // Assumes user context has `user` info
   const date = new Date();
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -38,9 +38,18 @@ const AddCar = () => {
 
   return (
     <div className="min-h-scree pb-10 px-6 md:pt-24 ">
-      <div className="max-w-3xl mx-auto p-8 rounded-lg shadow-md">
+      <div
+        className={`${
+          theme === "dark"
+            ? "bg-[#141414] text-white"
+            : "bg-base-200 text-black"
+        } max-w-3xl mx-auto p-8 rounded-lg shadow-md`}
+      >
         <h2 className="text-3xl font-bold mb-6 text-center">Add New Car</h2>
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form
+          onSubmit={handleSubmit}
+          className="space-y-6"
+        >
           {/* Car Model */}
           <div className="form-control">
             <label className="label font-semibold">Car Model</label>

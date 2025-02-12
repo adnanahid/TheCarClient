@@ -29,7 +29,12 @@ const Navbar = () => {
   };
 
   return (
-    <div className="w-full fixed z-10 shadow-lg py-3 bg-[#141414] text-white">
+    <div
+      className={`w-full fixed z-10 shadow-lg py-3 
+  ${
+    theme === "dark" ? "bg-[#141414] text-white" : "bg-base-200 text-black"
+  }`}
+    >
       <div className="flex items-center justify-between px-4">
         {/* Navbar Start */}
         <div className="flex items-center">
@@ -80,7 +85,9 @@ const Navbar = () => {
           <img src={icon} alt="Logo" className="w-8 ml-2" />
           <div
             onClick={() => navigate("/")}
-            className="text-2xl font-bold ml-2 text-gray-900 dark:text-white"
+            className={`text-2xl font-bold ml-2 ${
+              theme === "dark" ? "text-white" : "text-black"
+            }`}
           >
             The <span className="text-red-600">Cars</span>
           </div>

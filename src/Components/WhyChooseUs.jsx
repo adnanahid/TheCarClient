@@ -42,7 +42,7 @@ const WhyChooseUs = () => {
             <div
               key={index}
               className={`flex flex-col items-center text-center p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 ${
-                theme === "dark" ? "bg-[#141414]" : ""
+                theme === "dark" ? "bg-[#141414]" : "bg-base-200"
               }`}
             >
               {/* Icon */}

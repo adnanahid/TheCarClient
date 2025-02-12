@@ -6,7 +6,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 import { MagnifyingGlass } from "react-loader-spinner";
 
 const AvailableCars = () => {
-  const { user, loading } = useContext(AuthContext);
+  const { user, loading, theme } = useContext(AuthContext);
   const [available, setAvailable] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredCars, setFilteredCars] = useState([]);
@@ -125,7 +125,11 @@ const AvailableCars = () => {
           {filteredCars.map((car, index) => (
             <div
               key={index}
-              className="card shadow-xl transition-transform transform hover:scale-105 my-12"
+              className={` ${
+                theme === "dark"
+                  ? "bg-[#141414] text-white"
+                  : "bg-base-200 text-black"
+              } card shadow-xl transition-transform transform hover:scale-105 my-12`}
             >
               <figure>
                 <img
@@ -169,7 +173,11 @@ const AvailableCars = () => {
           {filteredCars.map((car, index) => (
             <div
               key={index}
-              className="flex items-center rounded-lg p-4 shadow-lg"
+              className={`${
+                theme === "dark"
+                  ? "bg-[#141414] text-white"
+                  : "bg-base-200 text-black"
+              } flex items-center rounded-lg p-4 shadow-lg`}
             >
               <img
                 src={car.carImage || "https://via.placeholder.com/150x100"}

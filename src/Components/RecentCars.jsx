@@ -34,7 +34,7 @@ const RecentCars = () => {
           <div
             key={car.id}
             className={`card shadow-xl mx-auto transition-transform transform hover:scale-105 w-full md:w-[90%] lg:w-full ${
-              theme === "dark" ? "bg-[#141414]" : ""
+              theme === "dark" ? "bg-[#141414]" : "bg-base-200"
             }`}
           >
             <figure>
