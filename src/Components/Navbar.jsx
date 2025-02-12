@@ -123,6 +123,16 @@ const Navbar = () => {
             <div className="flex gap-5">
               <NavLink to="/login">Login</NavLink>
               <NavLink to="/registration">Registration</NavLink>
+              {/* Theme Toggler */}
+              <button
+                class="theme-toggle"
+                type="button"
+                title="Toggle theme"
+                aria-label="Toggle theme"
+                onClick={toggleTheme}
+              >
+                {theme === "light" ? <GoMoon /> : <HiMiniSun />}
+              </button>
             </div>
           )}
         </div>
