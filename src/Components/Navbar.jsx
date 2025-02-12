@@ -111,7 +111,7 @@ const Navbar = () => {
                 {theme === "light" ? <GoMoon /> : <HiMiniSun />}
               </button>
 
-              {/* User Profile Picture */}
+              {/* User Profile */}
               <img
                 referrerPolicy="no-referrer"
                 alt={`${user?.displayName}`}
